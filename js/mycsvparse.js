@@ -9,5 +9,5 @@ $(document).ready(function() {
 
 function processData(allText) {
     var data = $.csv.toObjects(allText);
-    alarm("csv lines: "+data.length);
+    alert("csv lines: "+data.length);
 }
