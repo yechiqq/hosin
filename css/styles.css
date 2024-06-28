@@ -172,6 +172,12 @@ a:hover, a:focus {
 a:before, a:after {
 	transition: color 0.1s ease-in, background 0.1s ease-in;
 } 
+
+.fa-file-pdf-o {
+	color:#eb1c24;
+	padding-right:10px;
+	font-size:1.2em !important;
+}
 /* ==========================================================================
    Wrap Sections
    ========================================================================== */
