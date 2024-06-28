@@ -22,8 +22,8 @@ function processData(allText) {
     $('#productCat').text(data[0].category);
     $('#productName').text(data[0].productName);
     $('#productSubtitle').text(data[0].subtitle);
-    $('#productId').text(data[0].productId);
-    $('#productSize').text(data[0].size);
+    $('#productId').text("SKU: "+data[0].productId);
+    $('#productSize').text("Size: "+data[0].size);
     $('#productSize2').text(data[0].size2);
     $('#productImage > img').attr('src', "productimage/"+data[0].image);
     $('#productRemarks').text(data[0].remarks);
