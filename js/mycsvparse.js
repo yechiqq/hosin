@@ -25,7 +25,8 @@ function processData(allText) {
     $('#productId').text(data[0].productId);
     $('#productSize').text(data[0].size);
     $('#productSize2').text(data[0].size2);
-    $('#productImage > img').attr('src', data[0].image);
+    $('#productImage > img').attr('src', "productimage/"+data[0].image);
     $('#productRemarks').text(data[0].remarks);
-    $('#productDoc').text(data[0].documents);
+    html = '<a href="productdoc/'+data[0].documents+'">' + data[0].documents + "</a><br/>";
+    $('#productDoc').append(html);
 }
