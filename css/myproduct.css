@@ -18,3 +18,11 @@
     font-size: 15px;
     margin-bottom: 10px;
 }
+
+.classProductImage {
+    max-width:600px;
+}
+
+#productRemarks {
+    margin-bottom: 20px;
+}
