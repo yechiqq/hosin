@@ -28,8 +28,10 @@ function processData(allText) {
             $('#productName').text(item.productName);
             $('#productSubtitle').text(item.subtitle);
             $('#productId').text("SKU: "+item.productId);
-            $('#productSize').text("Size: "+item.size);
-            $('#productSize2').text(item.size2);
+            if (!$.trim(item.size)) {$('#productSize').text("Size: "+item.size);}
+            else {$('#productSize').remove();}
+            if (!$.trim(item.size2)) {$('#productSize2').text(item.size2);}
+            else {$('#productSize2').remove();}
             $('#productImage > img').attr('src', "productimage/"+item.image);
             $('#productRemarks').text(item.remarks);
             html = '<a target="_black" download href="productdoc/'+item.documents+'"><h4><i class="fa fa-file-pdf-o" aria-hidden="true"></i>' + item.documents + "</h4></a><br/>";
