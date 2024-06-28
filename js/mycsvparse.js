@@ -28,9 +28,9 @@ function processData(allText) {
             $('#productName').text(item.productName);
             $('#productSubtitle').text(item.subtitle);
             $('#productId').text("SKU: "+item.productId);
-            if (!$.trim(item.size)) {$('#productSize').text("Size: "+item.size);}
+            if (!item.size) {$('#productSize').text("Size: "+item.size);}
             else {$('#productSize').remove();}
-            if (!$.trim(item.size2)) {$('#productSize2').text(item.size2);}
+            if (!item.size2) {$('#productSize2').text(item.size2);}
             else {$('#productSize2').remove();}
             $('#productImage > img').attr('src', "productimage/"+item.image);
             $('#productRemarks').text(item.remarks);
