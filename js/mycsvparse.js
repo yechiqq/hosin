@@ -24,6 +24,7 @@ function processData(allText) {
     data.forEach(function(item) {
         // do something with `item`
         if (item.productId == paraProductId) {
+            alert("productid:"+item.productId+". para:"+paraProductId);
             $('#productCat').text(data[0].category);
             $('#productName').text(data[0].productName);
             $('#productSubtitle').text(data[0].subtitle);
