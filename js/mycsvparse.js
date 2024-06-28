@@ -27,6 +27,6 @@ function processData(allText) {
     $('#productSize2').text(data[0].size2);
     $('#productImage > img').attr('src', "productimage/"+data[0].image);
     $('#productRemarks').text(data[0].remarks);
-    html = '<a href="productdoc/'+data[0].documents+'">' + data[0].documents + "</a><br/>";
+    html = '<a href="productdoc/'+data[0].documents+'"><i class="fa fa-file-pdf-o" aria-hidden="true"></i>' + data[0].documents + "</a><br/>";
     $('#productDoc').append(html);
 }
