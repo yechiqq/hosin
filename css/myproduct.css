@@ -18,11 +18,14 @@
     font-size: 15px;
     margin-bottom: 10px;
 }
+.classDescription {
+    font-size: 15px;
+}
 
 .classProductImage {
     max-width:600px;
 }
 
 #productRemarks {
-    margin-bottom: 20px;
+    margin-bottom: 10px;
 }
