@@ -27,6 +27,27 @@ $(document).ready(function() {
             $('#productsContainer').append(html);
         }
     });
+
+    $("#categorytoiletbowl").click(function () {
+        var searchword = $("#main-search-bar").val();
+        if (searchword) {
+            searchword = searchword.toLowerCase();
+            $("#productsContainer").html("Category Toilet Bowl:<br/>");
+            html = '<div class="row">';
+
+            for (let i = 0; i < objectArray.length; ++i) {
+                // do something with `substr[i]`
+                item = objectArray[i];
+                if (item.category == "Toilet Bowl") {
+                    html += '<div class="col-sm-6 col-md-4 isotope-item">';
+                    html += '<a class="" href="product.html?productId='+item.productId+'"><div class="image-box"><div class="overlay-container"><img class="img-fluid" src="productimage/'+item.image+'" alt="No Image"></div></div><div class="featurename">'+item.productName+'</div></a>';
+                    html += '</div>';
+                }
+            }
+            html += '</div>';
+            $('#productsContainer').append(html);
+        }
+    });
 });
 
 
