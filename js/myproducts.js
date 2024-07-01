@@ -1,4 +1,4 @@
-var objectArray;
+var objectArray = [];
 $(document).ready(function() {
     $.ajax({
         type: "GET",
