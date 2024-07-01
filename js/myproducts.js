@@ -29,9 +29,7 @@ $(document).ready(function() {
     });
 
     $("#categorytoiletbowl").click(function () {
-        var searchword = $("#main-search-bar").val();
-        if (searchword) {
-            searchword = searchword.toLowerCase();
+        
             $("#productsContainer").html("Category Toilet Bowl:<br/>");
             html = '<div class="row">';
 
@@ -46,7 +44,7 @@ $(document).ready(function() {
             }
             html += '</div>';
             $('#productsContainer').append(html);
-        }
+        
     });
 });
 
