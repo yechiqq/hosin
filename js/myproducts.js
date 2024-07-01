@@ -10,10 +10,11 @@ $(document).ready(function() {
 
 $("#buttonMainSearch").click(function () {
     var searchword = $("#main-search-bar").val();
-
+    alert("onClick");
     if (searchword) {
         searchword = searchword.toLowerCase();
         $("#productsContainer").html("Search Result:<br/>");
+        alert("onClick put html");
         objectArray.forEach(function(item) {
             // do something with `item`
             if (item.productName.toLowerCase().indexOf(searchword) >= 0) {
