@@ -13,7 +13,7 @@
     <link href="css/font-awesome.min.css" rel="stylesheet">
     <script src="js/jquery-3.7.1.min.js"></script>
     <script src="js/jquery.csv.js"></script>
-    <script src="js/mycsvparse.js"></script>
+    <script src="js/myproducts.js"></script>
     <link rel="icon" href="images/hosin-falcon.png">
 
     <!-- Google tag (gtag.js) -->
@@ -52,7 +52,7 @@
     </div>
   </header>
 
-  <div class="headspace"></div>
+  <div class="headspace" style="background-color: gray;"></div>
 
   <div class="search-container">
     <div class="container">
@@ -66,30 +66,36 @@
         <div class="col-lg-9 col-md-3 col-sm-0 pl-0">
         </div>
       </div>
+      <br/>
       <div id="divFacetPanel" class="row bg-window">
         <div class="container">
-            <div id="divFacetFilters" class="row facet-list home-filter-group" style="">
+            <div id="divFacetFilters" class="row facet-list home-filter-group" style="padding-left: 20px;">
                 
-                <div class="col-lg-2 col-md-4 col-sm-6 col-xs-6 home-filter facet-dropdown p-md-0" data-value="filter-faculty">
-                        <div class="facet-dropdown-toggle dropdown-filter-faculty left-sperator" data-toggle="dropdown">
-                            Category
-                            <span class="caret"></span>
+                <div class="col-lg-3 col-md-4 col-sm-6 col-xs-6 home-filter facet-dropdown p-md-0" data-value="filter-faculty">
+                        
+                        <button class="btn btn-primary" type="button" data-bs-toggle="collapse" data-bs-target="#collapseCategory" aria-expanded="false" aria-controls="collapseCategory">
+                          Category
+                        </button>
+                        <div class="collapse" id="collapseCategory">
+                          <ul>
+                            <li><input id="faculty_type-1" class="facet-checkbox filter-faculty filter_input" type="checkbox" data-value="AI Singapore" style="margin-top:4px;"><span class="nus-facet-optionname">Bathroom Basin</span></li>
+                            <li><input id="faculty_type-1" class="facet-checkbox filter-faculty filter_input" type="checkbox" data-value="AI Singapore" style="margin-top:4px;"><span class="nus-facet-optionname">Bathroom Taps & Mixers</span></li>
+                          </ul>
                         </div>
-                        <ul class="dropdown-menu">
-                                <li class="li_filter"><label for="faculty_type-1" style="display:flex;"><input id="faculty_type-1" class="facet-checkbox filter-faculty filter_input" type="checkbox" data-value="AI Singapore" style="margin-top:4px;"><span class="nus-facet-optionname">Bathroom Basin</span><span class="badge badge-primary badge-pill nus-facet-count" style="height:18px;margin-top:4px;">24</span></label></li>
-                                <li class="li_filter"><label for="faculty_type-1" style="display:flex;"><input id="faculty_type-1" class="facet-checkbox filter-faculty filter_input" type="checkbox" data-value="AI Singapore" style="margin-top:4px;"><span class="nus-facet-optionname">Bathroom Taps & Mixers</span><span class="badge badge-primary badge-pill nus-facet-count" style="height:18px;margin-top:4px;">7</span></label></li>
-                        </ul>
+                        
 
                 </div>
-                <div class="col-lg-2 col-md-4 col-sm-6 col-xs-6 home-filter facet-dropdown p-md-0" data-value="filter-program">
-                        <div class="facet-dropdown-toggle dropdown-filter-program left-sperator" data-toggle="dropdown">
-                            Brand
-                            <span class="caret"></span>
+                <div class="col-lg-3 col-md-4 col-sm-6 col-xs-6 home-filter facet-dropdown p-md-0" data-value="filter-program">
+                        
+                        <button class="btn btn-primary" type="button" data-bs-toggle="collapse" data-bs-target="#collapseBrand" aria-expanded="false" aria-controls="collapseBrand">
+                          Brand
+                        </button>
+                        <div class="collapse" id="collapseBrand">
+                          <ul>
+                            <li><input id="faculty_type-1" class="facet-checkbox filter-faculty filter_input" type="checkbox" data-value="AI Singapore" style="margin-top:4px;"><span class="nus-facet-optionname">Ariston</span></li>
+                            <li><input id="faculty_type-1" class="facet-checkbox filter-faculty filter_input" type="checkbox" data-value="AI Singapore" style="margin-top:4px;"><span class="nus-facet-optionname">OXO</span></li>
+                          </ul>
                         </div>
-                        <ul class="dropdown-menu">
-                            <li class="li_filter"><label for="program_type-1"><input id="program_type-1" class="facet-checkbox filter-program filter_input filter-program-certificate" type="checkbox" data-value="graduate certificate"><span class="nus-facet-optionname">Ariston</span><span class="badge badge-primary badge-pill nus-facet-count">24</span></label></li>
-                            <li class="li_filter"><label for="program_type-2"><input id="program_type-2" class="facet-checkbox filter-program filter_input filter-program-certificate" type="checkbox" data-value="specialist certificate"><span class="nus-facet-optionname">OXO</span><span class="badge badge-primary badge-pill nus-facet-count">14</span></label></li>
-                        </ul>
                 </div>
                 
             </div>
@@ -103,10 +109,31 @@
   <!-- container -->
 
   <div id="products">
-    <div class="container">
+    <div id="productsContainer" class="container">
+      <p>View Products By Category</p>
       <div class="row">
-        <div class="col-md-4">
-          
+        <div class="col-lg-3">
+          <div class="cBigCategory">Bathroom</div>
+          <div class="cCategory"><a href="#">Bathroom Basin</a></div>
+          <div class="cCategory"><a href="#">Bathroom Taps & Mixers</a></div>
+          <div class="cCategory"><a href="#">Bathroom Vanity Cabinet</a></div>
+          <div class="cCategory"><a href="#">Rain Shower Set</a></div>
+          <div class="cCategory"><a href="#">Toilet Bowl</a></div>
+        </div>
+        <div class="col-lg-3">
+          <div class="cBigCategory">Kitchen</div>
+          <div class="cCategory"><a href="#">Kitchen Sink</a></div>
+          <div class="cCategory"><a href="#">Kitchen Sink Taps</a></div>
+        </div>
+        <div class="col-lg-3">
+          <div class="cBigCategory">Accessories</div>
+          <div class="cCategory"><a href="#">Bidet Spray</a></div>
+          <div class="cCategory"><a href="#">Mirror</a></div>
+        </div>
+        <div class="col-lg-3">
+          <div class="cBigCategory">Water Heater</div>
+          <div class="cCategory"><a href="#">Instant Heaters</a></div>
+          <div class="cCategory"><a href="#">Storage Heaters</a></div>
         </div>
       </div>
     </div>
