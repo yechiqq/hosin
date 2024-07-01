@@ -178,6 +178,11 @@ a:before, a:after {
 	padding-right:10px;
 	font-size:1.2em !important;
 }
+
+.search-container {
+	background-color: gray;
+	padding: 10px;
+}
 /* ==========================================================================
    Wrap Sections
    ========================================================================== */
