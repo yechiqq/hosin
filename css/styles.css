@@ -708,7 +708,9 @@ body .header {
 }
 
 @media screen and (max-width:769px) {
-	
+	.headspace {
+		padding: 120px 0;
+	}
 	.navbar .nav{
 		margin-top: 10px;
 	}
@@ -721,7 +723,9 @@ body .header {
 }
 }
 @media screen and (max-width:480px) {
-	
+	.headspace {
+		padding: 120px 0;
+	}
 	.navbar .nav{
 		margin-top: 10px;
 	}
