@@ -7,32 +7,23 @@ $(document).ready(function() {
         success: function(data) {objectArray = $.csv.toObjects(data);}
      });
 
-     $("#buttonMainSearch").click(function () {
+    $("#buttonMainSearch").click(function () {
         var searchword = $("#main-search-bar").val();
-        alert("onClick");
         if (searchword) {
             searchword = searchword.toLowerCase();
             $("#productsContainer").html("Search Result:<br/>");
+            objectArray.forEach(function(item) {
+                // do something with `item`
+                if (item.productName.toLowerCase().indexOf(searchword) >= 0) {
+                    html = item.productName;
+                    $('#productsContainer').append(html);
+                    return true;
+                }
+            });
         }
     });
 });
 
 
 
-$("#buttonMainSearch2").click(function () {
-    var searchword = $("#main-search-bar").val();
-    alert("onClick");
-    if (searchword) {
-        searchword = searchword.toLowerCase();
-        $("#productsContainer").html("Search Result:<br/>");
-        alert("onClick put html");
-        objectArray.forEach(function(item) {
-            // do something with `item`
-            if (item.productName.toLowerCase().indexOf(searchword) >= 0) {
-                html = item.productName;
-                $('#productsContainer').append(html);
-                return true;
-            }
-        });
-    }
-});
+
